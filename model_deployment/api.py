@@ -24,8 +24,16 @@ parser.add_argument(
     help='URL to be analyzed', 
     location='args')
 
+parser.add_argument(
+    'Money', 
+    type=int, 
+    required=True, 
+    help='Money', 
+    location='args')
+
 resource_fields = api.model('Resource', {
     'result': fields.String,
+    'Money':fields.String,
 })
 
 @ns.route('/')
@@ -37,7 +45,8 @@ class PhishingApi(Resource):
         args = parser.parse_args()
         
         return {
-         "result": predict_proba(args['URL'])
+         "result": predict_proba(args['URL']),
+         "Money":args['Money']
         }, 200
     
     

@@ -34,6 +34,10 @@ Configurar API 2025
 	python3 api.py
 	(ctrl+c) para detener la API
 
+10.Abrir la API utilizando DNS de IPv4 pública (cambia cada vez)
+ec2-3-137-168-86.us-east-2.compute.amazonaws.com:5000/
+ec2-3-137-168-86.us-east-2.compute.amazonaws.com:5000/predict/?URL=http://consultoriojuridico.co/pp/www.paypal.com/
+
 ###########################################################################################################
 LINUX
 ###########################################################################################################
